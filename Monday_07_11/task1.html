@@ -224,7 +224,78 @@ function FullName(Fname,Lname){
 
 return fname + '' + lname;
 
-}console.log('Huda','Ausaily');
+}
+console.log('Huda','Ausaily');
+
+
+// 19
+let arr = [1, 2, 3, 4, 5];
+var sum = 0;
+arr.forEach(function(num) { sum += num });
+average = sum / arr.length;
+console.log(average);
+
+// 20
+
+function random (){
+   
+}
+console.log(Math.random());
+
+// 21
+
+function randomBetweenNumbers(num1, num2) {
+
+x = Math.random() * (num1 - num2) +num2;
+
+x = Math.floor(x)
+
+console.log(x)
+
+
+}
+
+
+randomBetweenNumbers(prompt(`enter the big number`) , prompt(`enter the small number`));
+
+// 22
+function scoreInUniversty (degree){
+    if (degree <= 100 && degree >94 ) {
+        console.log(`A`);
+    }
+    else if (degree <= 94 && degree >84 ){
+        console.log(`B`);
+    }
+    else if (degree <= 84 && degree >69 ){
+        console.log(`C`);
+    }
+    else if (degree <= 69 && degree >49 ){
+        console.log(`D`);
+    }
+    else if (degree <= 49 && degree >0 ){
+        console.log(`F`);
+    }
+    else {
+        console.log(`You enter a wrong degree`);
+    }
+}
+
+scoreInUniversty(88);
+
+//23
+
+function counter (){
+ let x =0
+x = x+1
+console.log(x)
+
+}
+
+counter()
+
+
+
+
 
 
 
