@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <style>
+     h1{
+        border: black solid 2px;
+        background-color: lavender;
+        text-align: center;
+        width: 300px;
+     }
+    </style>
+</head>
+<body>
+   
+    <div id="box" ><h1 id ="text">HELLO WORLD!</h1></div>
+   
+   <script>
+    
+var i = 0;
+function change() {
+  var doc = document.getElementById("text");
+  var color = ["red", "yellow", "green"];
+  doc.style.backgroundColor = color[i];
+  i = (i + 1) % color.length;
+}
+setInterval(change, 1000);
+  
+ 
+   let text=document.getElementById('text')
+   text.onmouseover=function()
+   {
+    text.innerHTML="I'm Huda"
+    
+   }
+   text.onmouseout=function(){
+    text.innerHTML="HELLO WORLD!"
+   }
+   
+
+   </script>
+</body>
+</html>
