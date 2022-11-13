@@ -1,12 +1,12 @@
 
 let userArray = [];
-let arrayOfObject = {};
+let arrOb = {};
 var rows = [];
-let index = 0;
+let count = 0;
 function setData(data, userData) {
   if (userData == "userName") {
-    arrayOfObject = {};
-    arrayOfObject[`name`] = data;
+    arrOb = {};
+    arrOb[`name`] = data;
     userArray["userName"] = data;
     return (
       (document.getElementById("userName").innerHTML = data),
@@ -15,7 +15,7 @@ function setData(data, userData) {
       setUserData(userArray)
     );
   } else if (userData == "userEmail") {
-    arrayOfObject[`email`] = data;
+    arrOb[`email`] = data;
     userArray["userEmail"] = data;
     return (
       (document.getElementById("userEmail").innerHTML = data),
@@ -24,14 +24,14 @@ function setData(data, userData) {
       setUserData(userArray)
     );
   } else {
-    arrayOfObject[`mobile`] = data;
+    arrOb[`mobile`] = data;
     userArray["userNumber"] = data;
     return (
       (document.getElementById("userNumber").innerHTML = data),
       (document.getElementById("userNumber").style.backgroundColor = "Purple"),
       (document.getElementById("userNumber").style.display = "none"),
-      rows.unshift(arrayOfObject),
-      index++,
+      rows.unshift(arrOb),
+      count++,
       setUserData(userArray)
     );
   }
