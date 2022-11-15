@@ -9,27 +9,27 @@ function setData(data, userData) {
     arrOb[`name`] = data;
     userArray["userName"] = data;
     return (
-      (document.getElementById("userName").innerHTML = data),
-      (document.getElementById("userName").style.backgroundColor = "Lavender"),
-      (document.getElementById("userName").style.display = "none"),
+      // (document.getElementById("userName").innerHTML = data),
+      // (document.getElementById("userName").style.backgroundColor = "Lavender"),
+      // (document.getElementById("userName").style.display = "none"),
       setUserData(userArray)
     );
   } else if (userData == "userEmail") {
-    arrOb[`email`] = data;
+    arrOb[`email`] = data; 
     userArray["userEmail"] = data;
     return (
-      (document.getElementById("userEmail").innerHTML = data),
-      (document.getElementById("userEmail").style.backgroundColor = "Blueviolet"),
-      (document.getElementById("userEmail").style.display = "none"),
+      // (document.getElementById("userEmail").innerHTML = data),
+      // (document.getElementById("userEmail").style.backgroundColor = "Blueviolet"),
+      // (document.getElementById("userEmail").style.display = "none"),
       setUserData(userArray)
     );
   } else {
     arrOb[`mobile`] = data;
     userArray["userNumber"] = data;
     return (
-      (document.getElementById("userNumber").innerHTML = data),
-      (document.getElementById("userNumber").style.backgroundColor = "Purple"),
-      (document.getElementById("userNumber").style.display = "none"),
+      // (document.getElementById("userNumber").innerHTML = data),
+      // (document.getElementById("userNumber").style.backgroundColor = "Purple"),
+      // (document.getElementById("userNumber").style.display = "none"),
       rows.unshift(arrOb),
       count++,
       setUserData(userArray)
