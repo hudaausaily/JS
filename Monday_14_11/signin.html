@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+    body{
         background-color: rgb(170, 123, 215);
         }
 
@@ -19,15 +19,12 @@
             text-align: center;
 
         }
-    </style>
+ </style>       
 </head>
 <body>
-    <form method="get" action="signin.html">
+    <form method="get" >
         <h4>Registration Form</h4>
-        <h2>Sign Up</h2>
-        <label>Full Name:</label><br>
-        <input type="text" id="username" name="username">
-        <br>
+        <h2>Sign In</h2>
         <label>Email:</label><br>
         <input type="email" id="email" name="email">
         <br>
@@ -35,30 +32,31 @@
         <input type="password" id="pass" name="password">
         <br>
         <br>
-        <input type="submit" value="submit" onclick="addData()"></input>
+        <input type="submit" value="submit" onclick="checkData()"></input>
     </form>
-
-    
     <script>
-        function addData(){
-    let value
-var username = document.getElementById(`username`).value;
-var email = document.getElementById(`email`).value;
-var pass = document.getElementById(`pass`).value;
+        function checkData(){
+    var enteremail = document.getElementById('email').value;
+    var enterPwd = document.getElementById('pass').value;
 
+    var getEmail=localStorage.getItem('useremail');
+    var getPwd=localStorage.getItem('userpwd');
 
-
-localStorage.setItem(`Username`,username);
-localStorage.setItem(`useremail`,email);
-localStorage.setItem(`userpwd`,pass);
-
-
-   document.getElementById("name").value="";
-   document.getElementById("email").value="";
-   document.getElementById("pass").value="";
+    if(enteremail == getEmail)
+    {
+        if(enterPwd == getPwd)
+        {
+            alert("login successful");
+        }
+        else
+        {
+            alert("wrong password");
+        }
+    }
+    else{
+        alert("Invalid datalis");
+    }
 }
-
-
     </script>
 </body>
 </html>
